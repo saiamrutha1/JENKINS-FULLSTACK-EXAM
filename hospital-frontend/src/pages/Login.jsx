@@ -10,7 +10,7 @@ export default function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:8081/auth/login", form);
+      const res = await axios.post("http://localhost:9090/hospital-backend-exam/auth/login", form);
       localStorage.setItem("token", res.data);
       localStorage.setItem("username", form.username);
       navigate("/dashboard");
